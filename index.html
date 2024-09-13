@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Prova</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .card.dark-mode {
+            background-color: #1e1e1e;
+            border-color: #333;
+            color: white;
+        }
+        .btn-dark-mode {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
 </head>
 <body>
+    <button class="btn btn-primary btn-dark-mode" id="toggleDarkMode">Dark Mode</button>
     
+    <h1 class="text-center my-5">DRINK DELLA SETTIMANA</h1>
+    <div class="d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <img src="./immagini/japane.webp" class="card-img-top" alt="Drink della settimana">
+            <div class="card-body">
+                <h5 class="card-title fw-bold fs-3">Japane Ice Tea</h5>
+                <p class="card-text">Il Japanese Ice Tea è un cocktail rinfrescante dal sapore delicato e leggermente erbaceo. questo drink offre un perfetto equilibrio tra dolcezza e acidità, con un retrogusto fresco e leggero. Ideale per chi cerca un cocktail elegante e dissetante, con un tocco di esotismo giapponese.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('toggleDarkMode').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            const card = document.querySelector('.card');
+            card.classList.toggle('dark-mode');
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
